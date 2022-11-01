@@ -1,0 +1,76 @@
+/* Global Settings */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@font-face {
+    font-family: Outfit;
+    src: url(../fonts/Outfit-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Outfit;
+    src: url(../fonts/Outfit-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Outfit;
+    src: url(../fonts/Outfit-SemiBold.ttf);
+    font-weight: 600;
+}
+
+/* Desktop View */
+body {
+    background-color: #F0F0F0;
+    font-family: Outfit;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.75rem;
+    color: #313A45;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #FFFFFF;
+    height: 80px;
+}
+
+main {
+    margin: 2rem 36rem;
+}
+
+h1 {
+    line-height: 3rem;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+h2 {
+    line-height: 2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+#header_container {
+    margin: 0 36rem;
+}
+
+#hook_logo {
+    height: 50px;
+    width: 50px;
+}
+
+#hook_text {
+    height: 25px;
+    width: 60px;
+}
