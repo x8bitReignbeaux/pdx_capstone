@@ -42,11 +42,14 @@ body {
 
 header {
     background-color: #FFFFFF;
-    height: 80px;
+    height: 8rem;
 }
 
 main {
     margin: 2rem 36rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 h1 {
@@ -62,15 +65,31 @@ h2 {
 }
 
 #header_container {
-    margin: 0 36rem;
+    height: 8rem;
+    margin: 0 36rem; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#site_logo_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 #hook_logo {
-    height: 50px;
-    width: 50px;
+    height: 5rem;
+    width: 5rem;
 }
 
 #hook_text {
-    height: 25px;
-    width: 60px;
+    height: 2.5rem;
+    width: 6rem;
+    margin-left: 1rem;
+}
+
+.nav-link {
+    margin-left: 2.5rem;
 }
