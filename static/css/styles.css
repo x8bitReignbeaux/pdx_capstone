@@ -45,8 +45,13 @@ header {
     height: 8rem;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+}
+
 main {
-    margin: 2rem 36rem;
+    margin: 2rem 30rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -66,7 +71,7 @@ h2 {
 
 #header_container {
     height: 8rem;
-    margin: 0 36rem; 
+    margin: 0 30rem; 
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -92,4 +97,10 @@ h2 {
 
 .nav-link {
     margin-left: 2.5rem;
+}
+
+#user_profile_photo {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 46px;
 }

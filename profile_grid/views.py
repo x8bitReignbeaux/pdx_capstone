@@ -1,5 +1,10 @@
 from django.shortcuts import render
+from users.models import UserProfile
 
 # Create your views here.
 def profile_grid(request):
-    return render(request, 'profile_grid/grid.html')
+    user_list = UserProfile.objects.all()
+    context = {
+        'user_list': user_list
+    }
+    return render(request, 'profile_grid/grid.html', context=context)

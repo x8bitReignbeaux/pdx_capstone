@@ -15,7 +15,7 @@ class UserCreationForm(forms.ModelForm):
 
     class Meta:
         model = UserProfile
-        fields = ('email', 'first_name', 'last_name', 'date_of_birth', 'ethnicity', 'gender_identity', 'sexual_orientation','is_admin')
+        fields = ('email', 'first_name', 'last_name', 'date_of_birth', 'ethnicity', 'gender_identity', 'sexual_orientation', 'profile_photo', 'is_admin')
         
 
     def clean_password2(self):
@@ -44,7 +44,7 @@ class UserChangeForm(forms.ModelForm):
 
     class Meta:
         model = UserProfile
-        fields = ('email', 'password', 'first_name', 'last_name', 'date_of_birth', 'ethnicity', 'gender_identity', 'sexual_orientation', 'is_active', 'is_admin')
+        fields = ('email', 'password', 'first_name', 'last_name', 'date_of_birth', 'ethnicity', 'gender_identity', 'sexual_orientation', 'profile_photo', 'is_active', 'is_admin')
 
 
 class UserAdmin(BaseUserAdmin):
@@ -59,7 +59,7 @@ class UserAdmin(BaseUserAdmin):
     list_filter = ('is_admin',)
     fieldsets = (
         (None, {'fields': ('email', 'password')}),
-        ('Personal info', {'fields': ('first_name', 'last_name', 'date_of_birth','ethnicity', 'gender_identity', 'sexual_orientation')}),
+        ('Personal info', {'fields': ('first_name', 'last_name', 'date_of_birth','ethnicity', 'gender_identity', 'sexual_orientation', 'profile_photo')}),
         ('Permissions', {'fields': ('is_admin',)}),
     )
     # add_fieldsets is not a standard ModelAdmin attribute. UserAdmin
@@ -67,13 +67,12 @@ class UserAdmin(BaseUserAdmin):
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('email', 'first_name', 'last_name', 'date_of_birth', 'password1', 'password2', 'ethnicity', 'gender_identity', 'sexual_orientation'),
+            'fields': ('email', 'first_name', 'last_name', 'date_of_birth', 'password1', 'password2', 'ethnicity', 'gender_identity', 'sexual_orientation','profile_photo'),
         }),
     )
     search_fields = ('email',)
     ordering = ('email',)
     filter_horizontal = ()
-    REQUIRED_FIELDS = ['first_name', 'last_name', 'date_of_birth']
 
 # Register your models here.
 admin.site.register(Ethnicity)

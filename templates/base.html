@@ -4,14 +4,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Hook App</title>
+    <title>{% block title %}Hook App{% endblock title %}</title>
     <meta name="description" content="Hook Dating App" />
     <meta name="keywords" content="Gay, Trans, Dating App" />
 
     {% load static %}
     <link rel="icon" type="image/png" href="{% static 'images/icon.png'%}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css'%}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/profile_grid.css'%}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/styles.css'%}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/profile_grid.css'%}"
+    />
   </head>
   <body>
     <header>
@@ -65,16 +73,21 @@
             />
           </svg>
           {% if user.is_authenticated %}
+          <img
+            src="../media/{{ user.profile_photo }}"
+            alt="User Profile Photo"
+            id="user_profile_photo"
+            class="nav-link"
+          />
+          <div class="nav-link">{{ user.first_name }}</div>
           <a href="{% url 'logout' %}" class="nav-link">Logout</a>
           {% else %}
           <a href="{% url 'login' %}" class="nav-link">Login</a>
-          {% comment %}<a href="{% url 'register' %}" class="nav-link">Register</a>{%endcomment%}
+          <a href="{% url 'users:register' %}" class="nav-link">Register</a>
           {% endif %}
         </nav>
       </div>
     </header>
-    <main>
-    {% block content %} {% endblock %}
-    </main>
+    <main>{% block content %} {% endblock %}</main>
   </body>
 </html>
