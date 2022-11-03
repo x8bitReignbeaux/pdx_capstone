@@ -80,7 +80,12 @@
             class="nav-link"
           />
           <div class="nav-link">{{ user.first_name }}</div>
-          <a href="{% url 'logout' %}" class="nav-link">Logout</a>
+          <div class="dropdown">
+            <button class="dropbtn">&#8964;</button>
+            <div class="dropdown-content">
+              <a href="{% url 'logout' %}" class="nav-link">Logout</a>
+            </div>
+          </div>
           {% else %}
           <a href="{% url 'login' %}" class="nav-link">Login</a>
           <a href="{% url 'users:register' %}" class="nav-link">Register</a>
