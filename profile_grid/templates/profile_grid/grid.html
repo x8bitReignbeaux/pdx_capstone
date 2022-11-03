@@ -1,0 +1,56 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block title %}Hook App - Home{%endblock %} 
+
+{% block content %}
+<div id="message_container">
+  <div id="mode_container">
+    <div id="mode_icon_container">
+      <img
+        src="{% static 'images/heart_icon.png' %}"
+        alt="Heart Icon"
+        id="heart_icon"
+      />
+    </div>
+    <h1>Dating</h1>
+    <p>Explore the dating world</p>
+  </div>
+  <br />
+  <hr />
+  <br />
+  <div id="matches_container">
+    <h1>Matches (3)</h1>
+  </div>
+  <br />
+  <hr />
+  <br />
+  <div id="chat_container">
+    <div id="chat_buttons">
+      <p id="chat" class="chat_buttons">Chats</p>
+      <p id="inactive_chat" class="chat_buttons">Inactive Chats</p>
+    </div>
+  </div>
+</div>
+<div id="profile_container">
+  <div id="profile_container_header">
+    <div id="search_bar">
+      <input type="text" placeholder="Search" id="search_input" />
+    </div>
+    <div id="grid_layout">
+        
+    </div>
+  </div>
+  <br />
+  <hr />
+  <br />
+  <div id="profile_grid">
+    {% for user in user_list %}
+    <div class="profile_card">
+        <img src="../media/{{ user.profile_photo }}" class="profile_card_photo"/>
+        <p class="first_name">{{ user.first_name }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

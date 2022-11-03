@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Hook App - Register{% endblock %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    {{form.as_div}}
+    <input type="submit" value="Register" />
+</form>
+{% endblock %}
