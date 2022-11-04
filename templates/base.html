@@ -103,6 +103,35 @@
         </nav>
       </div>
     </header>
-    <main>{% block content %} {% endblock %}</main>
+    <main>
+      <div id="message_container">
+        <div id="mode_container">
+          <div id="mode_icon_container">
+            <img
+              src="{% static 'images/heart_icon.png' %}"
+              alt="Heart Icon"
+              id="heart_icon"
+            />
+          </div>
+          <h1>Dating</h1>
+          <p>Explore the dating world</p>
+        </div>
+        <br />
+        <hr />
+        <br />
+        <div id="matches_container">
+          <h1>Matches (3)</h1>
+        </div>
+        <br />
+        <hr />
+        <br />
+        <div id="chat_container">
+          <div id="chat_buttons">
+            <p id="chat" class="chat_buttons">Chats</p>
+            <p id="inactive_chat" class="chat_buttons">Inactive Chats</p>
+          </div>
+        </div>
+      </div>
+      {% block content %} {% endblock %}</main>
   </body>
 </html>

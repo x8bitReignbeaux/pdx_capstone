@@ -26,6 +26,10 @@ class UserCreationForm(forms.ModelForm):
             raise ValidationError("Passwords don't match")
         return password2
 
+    def profile_photo(self):
+        profile_photo = self.cleaned_data.get('profile_photo')
+        return profile_photo
+    
     def save(self, commit=True):
         # Save the provided password in hashed format
         user = super().save(commit=False)

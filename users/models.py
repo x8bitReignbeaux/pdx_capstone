@@ -72,7 +72,7 @@ class UserProfile(AbstractBaseUser):
     ethnicity = models.ForeignKey('Ethnicity', on_delete=models.SET_NULL, null=True)
     gender_identity = models.ForeignKey('GenderIdentity', on_delete=models.SET_NULL, null=True)
     sexual_orientation = models.ForeignKey('SexualOrientation', on_delete=models.SET_NULL, null=True)
-    profile_photo = models.ImageField(default='default.png', upload_to='profile_photos', null=True)
+    profile_photo = models.ImageField(default='default.png', upload_to='profile_photos/', null=True)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
 

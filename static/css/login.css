@@ -1,11 +1,19 @@
 #login_container {
     margin: auto;
-    width: 25rem;
+    background-color: #FFFFFF;
+    height: 85rem;
+    width: 67.5%;
+    border-radius: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #login_form {
     display: flex;
     flex-direction: column;
+    align-self: center;
+    width: 30rem;
 }
 
 #id_username, #id_password {
