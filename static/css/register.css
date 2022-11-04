@@ -1,0 +1,35 @@
+#register_form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 25rem;
+}
+
+#id_email, #id_first_name, #id_last_name, #id_date_of_birth, #id_ethnicity, #id_gender_identity, #id_sexual_orientation,
+#id_password1, #id_password2 {
+    border: none;
+    border-bottom: 0.2rem solid #D6D6D6;
+    background-color: transparent;
+    padding: 0.5rem;
+}
+
+#id_email:focus, #id_first_name:focus, #id_last_name:focus, #id_date_of_birth:focus, #id_ethnicity:focus, #id_gender_identity:focus, #id_sexual_orientation:focus,
+#id_password1:focus, #id_password2:focus {
+    border-bottom-color: #E6256F;
+}
+
+#id_email:focus-visible, #id_first_name:focus-visible, #id_last_name:focus-visible, #id_date_of_birth:focus-visible, #id_ethnicity:focus-visible,
+#id_gender_identity:focus-visible, #id_sexual_orientation:focus-visible, #id_password1:focus-visible, #id_password2:focus-visible {
+    outline: none;
+}
+
+#register_button {
+    height: 5rem;
+    background: linear-gradient(90.39deg, #E6256F 0.14%, #E94D56 99.66%);
+    box-shadow: 0rem 2rem 2.5rem rgba(232, 65, 93, 0.2);
+    border-radius: 1.2rem;
+    color: #FFF;
+    margin: 1rem 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
